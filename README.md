@@ -6,6 +6,7 @@ This is a code to determine the stellar structure of stars with mass > 1.3 solar
 To execute this code only need to edit the file: mainstellarcode.py and modify:
 
 The initial mass $> 1.3 M_{\odot}$
+
 *as a suggestion to leave running in multiprocess with 4 CPUs, but If you want to change this option can modify it in the arguments (args) the two last values by False and 1 
 
 In this PDF you can observe some physical assumptions, implementations, and analysis of the results

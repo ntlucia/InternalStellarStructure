@@ -30,7 +30,7 @@ def density(P,T,X=0.7):
 
 
 #read opacities
-rosseland = pd.read_csv('./opacities/combined_OPAL_F05_X0.7_Z0.02_logT8.7-2.7.txt', index_col=0)
+rosseland = pd.read_csv('./combined_OPAL_F05_X0.7_Z0.02_logT8.7-2.7.txt', index_col=0)
 #Here we assume the solar composition X=0.7, Y=0.28, Z=0.02
 rosseland.columns = rosseland.columns.astype(float)
 

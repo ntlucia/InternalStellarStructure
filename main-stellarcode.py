@@ -22,12 +22,32 @@ from functions import load_inner, load_outer
 from functions import ode
 from functions import shooter, solver
 
+##################################################################
+##                                                              ##
+## Execute code to implement the solution of the stellar        ##
+## structure of a star with masses > 1.3 Solar Masses,          ##
+## also assuming solar composition X=0.7, Y=0.28, Z=0.02        ##
+##                                                              ##
+##################################################################
+
+
+############# Here you can modify ##############
+
 #Initial parameters
 M_star = 1.33*c.Ms #Stellar mass
+
+#Shootf args: Star mass, Shooting point in fraction of Mass, number of saved points, interior starting point, exterior starting point, do multiprocessing? number of cpus to use
+args = (M_star, 0.25, int(1e5), 1e-12, 0.9999, True, 4)
+
+
+########### Here you can NOT modify ############
+
 X = 0.7 #Fraction of Hydrogen
 Y= 0.28 #Fraction of Helium
 Z=0.02 #Fraction of the other elements
-mu = 4./(3+5*X) #mean molecular weigth assuming fully ionized
+mu = 4./(3+5*X) #mean molecular weight assuming fully ionized
+
+
 
 #Surface
 R_star_starting = ((M_star/c.Ms)**(0.75))*c.Rs # eq. 1.87 from Stellar Interiors - C. Heansen
@@ -46,10 +66,6 @@ print('logTc', np.log10(Tc_starting))
 
 # initial guess vector
 vec = np.array([L_star_starting, Pc_starting, R_star_starting, Tc_starting])
-# shootf args
-
-# Star mass, Shooting point in fraction of Mass, number of saved points, interior starting point, exterior starting point, do multiprocessing? number of cpus to use
-args = (M_star, 0.25, int(1e5), 1e-12, 0.9999, True, 4)
 
 # set limits for the minimizer
 bounds = (np.array([1e-1*c.Ls, Pc_starting, 1e-1*c.Rs, Tc_starting]),

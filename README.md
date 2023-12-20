@@ -9,4 +9,4 @@ The initial mass $> 1.3 M_{\odot}$
 
 *as a suggestion to leave running in multiprocess with 4 CPUs, but If you want to change this option can modify it in the arguments (args) the two last values by False and 1 
 
-In \href{https://livejohnshopkins-my.sharepoint.com/:b:/g/personal/noliver8_jh_edu/EaRznfckOtlEr36TB8IFzKEBl3WvTcU_vc9oQ2lOLfLPYQ?e=dCUOob}{this PDF} you can observe some physical assumptions, implementations, and analysis of the results
+In [this PDF](https://livejohnshopkins-my.sharepoint.com/:b:/g/personal/noliver8_jh_edu/EaRznfckOtlEr36TB8IFzKEBl3WvTcU_vc9oQ2lOLfLPYQ?e=dCUOob) you can observe some physical assumptions, implementations, and analysis of the results
